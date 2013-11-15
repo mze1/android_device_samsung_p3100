@@ -37,11 +37,6 @@ PRODUCT_COPY_FILES += \
     	$(LOCAL_PATH)/rootdir/init.espresso.rc:root/init.espresso.rc \
     	$(LOCAL_PATH)/rootdir/ueventd.espresso.rc:root/ueventd.espresso.rc \
     	$(LOCAL_PATH)/rootdir/fstab.espresso:root/fstab.espresso
-
-# SGX prebuilt Modules (Thanks to Omapedia for building guide : http://omappedia.org/wiki/Building_Modules#GFX)
-PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/system/lib/modules/pvrsrvkm_sgx540_120.ko:system/lib/modules/pvrsrvkm_sgx540_120.ko \
-	$(LOCAL_PATH)/system/lib/modules/omaplfb_sgx540_120.ko:system/lib/modules/omaplfb_sgx540_120.ko
 	
 # Audio
 PRODUCT_COPY_FILES += \
