@@ -37,7 +37,23 @@ PRODUCT_COPY_FILES += \
     	$(LOCAL_PATH)/rootdir/init.espresso.rc:root/init.espresso.rc \
     	$(LOCAL_PATH)/rootdir/ueventd.espresso.rc:root/ueventd.espresso.rc \
     	$(LOCAL_PATH)/rootdir/fstab.espresso:root/fstab.espresso
-	
+
+# Prebuit 	Kernel
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+LOCAL_KERNEL := $(LOCAL_PATH)/kernel
+else
+LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
+
+# Kernel zImage (Named kernel)
+PRODUCT_COPY_FILES += \
+	$(LOCAL_KERNEL):kernel
+
+# Kernel Modules
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/system/lib/modules/dhd.ko:system/lib/modules/dhd.ko \
+	$(LOCAL_PATH)/system/lib/modules/scsi_wait_scan.ko:system/lib/modules/scsi_wait_scan.ko
+
 # Audio
 PRODUCT_COPY_FILES += \
     	$(LOCAL_PATH)/configs/audio_effects.conf:system/etc/audio_effects.conf
