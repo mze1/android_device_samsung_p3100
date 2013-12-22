@@ -87,10 +87,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     	audio.primary.piranha \
     	camera.piranha \
-    	hwcomposer.piranha \
     	lights.piranha \
     	libinvensense_mpl \
-    	power.piranha
+		hwcomposer.piranha \
+		power.piranha
 
 # Charger
 PRODUCT_PACKAGES += \
