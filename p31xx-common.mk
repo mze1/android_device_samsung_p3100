@@ -77,6 +77,10 @@ PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
         $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
 
+# Custom Boot animation (You can replace the bootanimation.zip file with you own)
+PRODUCT_COPY_FILES += \
+    	$(LOCAL_PATH)/bootanimation.zip:system/media/bootanimation.zip
+
 # Keylayout
 PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/usr/keychars/espresso-gpio-keypad.kcm:system/usr/keychars/espresso-gpio-keypad.kcm \
@@ -87,10 +91,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     	audio.primary.piranha \
     	camera.piranha \
-    	hwcomposer.piranha \
     	lights.piranha \
     	libinvensense_mpl \
-    	power.piranha
+		hwcomposer.piranha \
+		power.piranha
 
 # Charger
 PRODUCT_PACKAGES += \
